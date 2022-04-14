@@ -106,7 +106,7 @@ pyOpenSSL==19.1.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
 PySocks==1.7.1
-pyswip==0.2.10
+pyswip @ git+https://github.com/yuce/pyswip@1e99cdf30cb96691251331a989831b0d24bcfc8a
 pytest==6.2.5
 python-dateutil==2.8.1
 python-dotenv==0.19.2
@@ -143,6 +143,7 @@ terminado==0.9.1
 testpath==0.4.4
 tf-estimator-nightly==2.8.0.dev2021122109
 threadpoolctl==2.1.0
+tk==0.1.0
 toml==0.10.1
 tornado==6.0.4
 tqdm==4.48.2
