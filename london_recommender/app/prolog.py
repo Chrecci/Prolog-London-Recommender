@@ -4,7 +4,13 @@
 import tempfile
 from pyswip.prolog import Prolog
 from pyswip.easy import *
+from multiprocessing import Lock
 
+prologlock = Lock()
+def actual(data):
+    
+    with prologlock:
+        return prolog_answer(data)
 def prolog_answer(input_lst):
     prolog = Prolog() # Global handle to interpreter
 
@@ -46,7 +52,7 @@ def prolog_answer(input_lst):
     registerForeign(write_py)
     read_py.counter = 0
 
-    prolog.consult("kb.pl") # open the KB for consulting
+    prolog.consult("app/prolog_backend/kb.pl") # open the KB for consulting
 
     call(retractall(known))
 
@@ -56,4 +62,5 @@ def prolog_answer(input_lst):
     print("Your problem is " + (problem[0]['X'] + "." if problem else "unknown."))
     return problem[0]['X']
 
-print(prolog_answer(['active', 'yes', 'no']))
+#print(prolog_answer(['active', 'yes', 'no']))
+print(actual(['chill', 'yes', 'library']))
