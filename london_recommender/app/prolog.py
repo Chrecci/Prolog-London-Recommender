@@ -8,7 +8,6 @@ from multiprocessing import Lock
 
 prologlock = Lock()
 def actual(data):
-    
     with prologlock:
         return prolog_answer(data)
 def prolog_answer(input_lst):
@@ -62,5 +61,5 @@ def prolog_answer(input_lst):
     print("Your problem is " + (problem[0]['X'] + "." if problem else "unknown."))
     return problem[0]['X']
 
-#print(prolog_answer(['active', 'yes', 'no']))
-print(actual(['chill', 'yes', 'library']))
+# print(prolog_answer(['active', 'no', 'yes']))
+# print(actual(['chill', 'no', 'yes', 'min']))

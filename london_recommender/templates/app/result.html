@@ -1,5 +1,12 @@
-<h1>Success Page</h1>
+<h2>Completed!</h2>
 
-<p>You have successfully entered in the information</p>
+<p> We have just the right thing for you!</p>
 
-<p>The name you entered was {% csrf_token %} {{ answer }}</p>
+<p> Based on your inputs: </p>
+
+<h5> {{ result }}</h5>
+<p>The place you should go to is:  {% csrf_token %}</p>
+
+<h3>{{ answer }}</h3>
+
+<a href="{% url 'index' %}"> Restart </a>

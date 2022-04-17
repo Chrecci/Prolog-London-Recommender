@@ -13,7 +13,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run Server:
+Run Server (No Threading):
 ```
 cd london_recommender
 python manage.py runserver --nothreading --noreload

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
+
 <body>
-  <p>Hello World</p>
-  <a href="{% url 'vibe' %}">Home</a>.
+  <h3>Welcome to our London Covid Activities Recommender! </h3>
+  <p> Simply follow our questionnaire and our AI expert system will tell you what to do!</p>
+  <a href="{% url 'vibe' %}">Begin!</a> 
   {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
   {% block content %}<!-- default content text (typically empty) -->{% endblock %}
 </body>

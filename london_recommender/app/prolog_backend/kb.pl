@@ -7,9 +7,9 @@ activity(hampstead_heath) :- vibe(active), \+has_bike(yes), \+willing_mask(yes).
 activity(castle) :- vibe(active), \+has_bike(yes), willing_mask(yes).
 activity(olympic_park) :- vibe(active), has_bike(yes).
 
-activity(barb_lib) :- vibe(chill), need_to_work(yes), env(library).
+activity(barbican_library) :- vibe(chill), need_to_work(yes), env(library).
 activity(fidelio_cafe) :- vibe(chill), need_to_work(yes), \+env(library).
-activity(st_pauls) :- vibe(chill), \+need_to_work(yes), walk(yes), travel_time(min).
+activity(st_pauls_cathedral) :- vibe(chill), \+need_to_work(yes), walk(yes), travel_time(min).
 activity(camden_market) :- vibe(chill), \+need_to_work(yes), walk(yes), travel_time(avg).
 activity(richmond_park) :- vibe(chill), \+need_to_work(yes), walk(yes), travel_time(max).
 activity(notting_hill) :- vibe(chill), \+need_to_work(yes), \+walk(yes), willing_mask(yes).
@@ -32,16 +32,16 @@ activity(dishoom) :- vibe(food), meal(breakfast), \+try_english(yes).
 % The code below implements the prompting to ask the user:
 
 vibe(X) :- ask_list(vibe, X).
-has_bike(X) :- ask(has_bike, X).
-need_to_work(X) :- ask(need_to_work, X).
-vulnerable(X) :- ask(vulnerable, X).
+has_bike(X) :- ask_list(has_bike, X).
+need_to_work(X) :- ask_list(need_to_work, X).
+vulnerable(X) :- ask_list(vulnerable, X).
 meal(X) :- ask_list(meal, X).
-willing_mask(X) :- ask(willing_mask,X).
-env(X) :- ask(env, X).
-walk(X) :- ask(walk,X).
+willing_mask(X) :- ask_list(willing_mask,X).
+env(X) :- ask_list(env, X).
+walk(X) :- ask_list(walk,X).
 energy(X) :- ask_list(energy, X).
 budget(X) :- ask_list(budget,X).
-try_english(X) :- ask(try_english, X).
+try_english(X) :- ask_list(try_english, X).
 travel_time(X) :- ask_list(travel_time,X).
 
 
