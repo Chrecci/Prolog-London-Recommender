@@ -1,4 +1,3 @@
-Ingrid Håbrekke, [4/14/2022 1:16 AM]
 %  Tell prolog that known/3 and multivalued/1 will be added later
 :- dynamic known/3 .
 
